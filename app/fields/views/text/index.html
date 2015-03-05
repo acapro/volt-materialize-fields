@@ -1,0 +1,6 @@
+<:Body>
+  <div class="input-field" item="{{label_id}}">
+    {{ if icon? }}<i class="{{attrs.icon}} prefix"></i>{{ end }}
+    <input type="{{ @type }}" value="{{ attrs.value }}" e-focusout="blur" class="{{ if errors }}invalid{{ elsif marked }}valid{{ end }}">
+    <label>{{label}}{{ if errors }} ({{ errors.or([]).join(', ') }}){{end}}</label>
+  </div>
